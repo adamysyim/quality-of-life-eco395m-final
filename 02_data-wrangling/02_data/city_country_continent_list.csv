@@ -1,0 +1,261 @@
+"City","Country","Continent"
+Tucson,United States,America
+San Jose,Costa Rica,America
+Miami,United States,America
+Nizhny Novgorod,Russia,Europe
+Rotterdam,Netherlands,Europe
+San Francisco,United States,America
+Canberra,Australia,Oceania
+Tirana,Albania,Europe
+Sharjah,United Arab Emirates,Asia
+Munich,Germany,Europe
+Riga,Latvia,Europe
+Dublin,Ireland,Europe
+Ottawa,Canada,America
+Tallinn,Estonia,Europe
+Prague,Czech Republic,Europe
+Varna,Bulgaria,Europe
+Reno,United States,America
+Odessa (Odesa),Ukraine,Europe
+Johannesburg,South Africa,Africa
+Albuquerque,United States,America
+Dusseldorf,Germany,Europe
+Yekaterinburg,Russia,Europe
+Moscow,Russia,Europe
+Kelowna,Canada,America
+Casablanca,Morocco,Africa
+Iasi,Romania,Europe
+Dnipro,Ukraine,Europe
+Hamburg,Germany,Europe
+Recife,Brazil,America
+Kuwait City,Kuwait,Asia
+Davao,Philippines,Asia
+Boston,United States,America
+Toronto,Canada,America
+Belgrade,Serbia,Europe
+Las Vegas,United States,America
+Calgary,Canada,America
+Reykjavik,Iceland,Europe
+Sofia,Bulgaria,Europe
+Saint Petersburg,Russia,Europe
+Genoa,Italy,Europe
+Orlando,United States,America
+Melbourne,Australia,Oceania
+Bangkok,Thailand,Asia
+Cambridge,United Kingdom,Europe
+Pretoria,South Africa,Africa
+Barcelona,Spain,Europe
+Florianopolis,Brazil,America
+Limassol,Cyprus,Asia
+Rome,Italy,Europe
+Winnipeg,Canada,America
+Eindhoven,Netherlands,Europe
+Jeddah (Jiddah),Saudi Arabia,Asia
+Liverpool,United Kingdom,Europe
+Brno,Czech Republic,Europe
+Richmond,United States,America
+Panama City,Panama,America
+Split,Croatia,Europe
+Zurich,Switzerland,Europe
+Dhaka,Bangladesh,Asia
+Leeds,United Kingdom,Europe
+Kharkiv,Ukraine,Europe
+Thessaloniki,Greece,Europe
+Frankfurt,Germany,Europe
+Bangalore,India,Asia
+Oslo,Norway,Europe
+Minneapolis,United States,America
+Edinburgh,United Kingdom,Europe
+Lima,Peru,America
+Bologna,Italy,Europe
+Amman,Jordan,Asia
+Medellin,Colombia,America
+Jacksonville,United States,America
+The Hague (Den Haag),Netherlands,Europe
+Porto Alegre,Brazil,America
+Luxembourg,Luxembourg,Europe
+Montreal,Canada,America
+Basel,Switzerland,Europe
+Islamabad,Pakistan,Asia
+Geneva,Switzerland,Europe
+Los Angeles,United States,America
+Helsinki,Finland,Europe
+Portland,United States,America
+Regina,Canada,America
+Chisinau,Moldova,Europe
+Copenhagen,Denmark,Europe
+Lagos,Nigeria,Africa
+Lodz,Poland,Europe
+Nicosia,Cyprus,Asia
+Riyadh,Saudi Arabia,Asia
+Wellington,New Zealand,Oceania
+San Jose,United States,America
+Manchester,United Kingdom,Europe
+Dubai,United Arab Emirates,Asia
+Phoenix,United States,America
+Porto,Portugal,Europe
+Beijing,China,Asia
+Paris,France,Europe
+Edmonton,Canada,America
+Austin,United States,America
+Izmir,Turkey,Asia
+Graz,Austria,Europe
+Kansas City,United States,America
+Manama,Bahrain,Asia
+Kiev (Kyiv),Ukraine,Europe
+Stuttgart,Germany,Europe
+Chennai,India,Asia
+Perth,Australia,Oceania
+Kolkata,India,Asia
+Gurgaon,India,Asia
+Bursa,Turkey,Asia
+Dallas,United States,America
+Monterrey,Mexico,America
+Lahore,Pakistan,Asia
+Ho Chi Minh City,Vietnam,Asia
+Washington,United States,America
+Pune,India,Asia
+Seattle,United States,America
+Kaunas,Lithuania,Europe
+Gothenburg,Sweden,Europe
+Baku,Azerbaijan,Asia
+Milan,Italy,Europe
+Cleveland,United States,America
+Berlin,Germany,Europe
+Denver,United States,America
+Madison,United States,America
+Brussels,Belgium,Europe
+Buenos Aires,Argentina,America
+Beirut,Lebanon,Asia
+Belfast,United Kingdom,Europe
+Lyon,France,Europe
+Hamilton,Canada,America
+Kathmandu,Nepal,Asia
+Muscat,Oman,Asia
+Delhi,India,Asia
+Madrid,Spain,Europe
+Queretaro,Mexico,America
+Jakarta,Indonesia,Asia
+Novi Sad,Serbia,Europe
+Mangalore,India,Asia
+Zagreb,Croatia,Europe
+Vilnius,Lithuania,Europe
+Istanbul,Turkey,Asia
+Lviv,Ukraine,Europe
+Salt Lake City,United States,America
+Athens,Greece,Europe
+Tokyo,Japan,Asia
+Santiago,Chile,America
+Nashville,United States,America
+Poznan,Poland,Europe
+Baltimore,United States,America
+Astana (Nur-Sultan),Kazakhstan,Asia
+Honolulu,United States,America
+Montevideo,Uruguay,America
+Sarajevo,Bosnia And Herzegovina,Europe
+Ahmedabad,India,Asia
+Bucharest,Romania,Europe
+Yerevan,Armenia,Asia
+Warsaw,Poland,Europe
+Belo Horizonte,Brazil,America
+Guadalajara,Mexico,America
+Adelaide,Australia,Oceania
+Houston,United States,America
+Bergen,Norway,Europe
+Skopje,North Macedonia,Europe
+Tel Aviv-Yafo,Israel,Asia
+Hyderabad,India,Asia
+Amsterdam,Netherlands,Europe
+Mumbai,India,Asia
+San Diego,United States,America
+Brisbane,Australia,Oceania
+Sacramento,United States,America
+Buffalo,United States,America
+San Juan,Puerto Rico,America
+San Antonio,United States,America
+Novosibirsk,Russia,Europe
+Boise,United States,America
+Coimbatore,India,Asia
+Lisbon,Portugal,Europe
+Glasgow,United Kingdom,Europe
+Oklahoma City,United States,America
+Birmingham,United Kingdom,Europe
+Thiruvananthapuram,India,Asia
+Raleigh,United States,America
+Utrecht,Netherlands,Europe
+Minsk,Belarus,Europe
+Anchorage,United States,America
+Cluj-Napoca,Romania,Europe
+Gdansk,Poland,Europe
+Halifax,Canada,America
+Cincinnati,United States,America
+Wroclaw,Poland,Europe
+Tbilisi,Georgia,Asia
+Seoul,South Korea,Asia
+Gent,Belgium,Europe
+Timisoara,Romania,Europe
+Pittsburgh,United States,America
+Bratislava,Slovakia,Europe
+Milwaukee,United States,America
+Vancouver,Canada,America
+Vienna,Austria,Europe
+Oakland,United States,America
+Rio de Janeiro,Brazil,America
+Mississauga,Canada,America
+Spokane,United States,America
+Noida,India,Asia
+Singapore,Singapore,Asia
+Quebec City,Canada,America
+Ankara,Turkey,Asia
+Antwerp,Belgium,Europe
+Valencia,Spain,Europe
+Campinas,Brazil,America
+Indianapolis,United States,America
+Brasilia,Brazil,America
+Columbus,United States,America
+Caracas,Venezuela,America
+Detroit,United States,America
+Sydney,Australia,Oceania
+Abu Dhabi,United Arab Emirates,Asia
+Hanoi,Vietnam,Asia
+Chiang Mai,Thailand,Asia
+Colombo,Sri Lanka,Asia
+Guatemala City,Guatemala,America
+Auckland,New Zealand,Oceania
+London,United Kingdom,Europe
+Victoria,Canada,America
+Atlanta,United States,America
+Nairobi,Kenya,Africa
+Philadelphia,United States,America
+Haifa,Israel,Asia
+New York,United States,America
+Stockholm,Sweden,Europe
+Sao Paulo,Brazil,America
+Mexico City,Mexico,America
+Krakow (Cracow),Poland,Europe
+Manila,Philippines,Asia
+Turin,Italy,Europe
+Bristol,United Kingdom,Europe
+Saint Louis,United States,America
+Cologne,Germany,Europe
+Tampa,United States,America
+Almaty,Kazakhstan,Asia
+Shanghai,China,Asia
+Doha,Qatar,Asia
+Charlotte,United States,America
+Shenzhen,China,Asia
+Durban,South Africa,Africa
+Taipei,Taiwan,Asia
+Curitiba,Brazil,America
+Cape Town,South Africa,Africa
+Karachi,Pakistan,Asia
+Bogota,Colombia,America
+Ljubljana,Slovenia,Europe
+Tehran,Iran,Asia
+Hong Kong,Hong Kong,Asia
+Cork,Ireland,Europe
+Quito,Ecuador,America
+Kuala Lumpur,Malaysia,Asia
+Budapest,Hungary,Europe
+Cairo,Egypt,Africa
+Chicago,United States,America
