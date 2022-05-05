@@ -1,10 +1,12 @@
 ### Importing the required libraries
 import requests
 from bs4 import BeautifulSoup
+import csv
+
 def generate_continent_tuple(continents):
     return [(continent['City'],
              continent['Country'],
-             continente['Continent']
+             continent['Continent']
              ) for continent in continents]
 
 
@@ -43,10 +45,9 @@ def scrape_continent(soup, path):
                 country = columns[1].text.split(',')[-1].lstrip()
                 continent = soup.find('h1').text.split(" ")[1][0:-1]
 
-        continents.append({'City': city, 'Country': country, 'Continent': continent})
+                continents.append({'City': city, 'Country': country, 'Continent': continent})
 
     # creating csv files of cities-continent match for individual continent
-    path = path.format(continent)
 
-    continent_to_csv(continents, path)
+        continent_to_csv(continents, path.format(continent))
 

@@ -1,6 +1,7 @@
 ### Importing the required libraries
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 ### Scraping Quality of Life Index and others ###
 def generate_quality_of_life_tuple(quality_of_lives):
@@ -31,10 +32,11 @@ def quality_of_life_index_to_csv(quality_of_lives, path):
 
 ## Scraping yearly data for 5 years
 def scrape_quality_of_life_index(url, year_latest, path):
-    quality_of_lives = []
+
     year = int(year_latest) + 1
 
     for i in range(5):
+        quality_of_lives = []
         year = year - 1
         # creating url for each year
         url_yearly = url + "?title=" + str(year)
@@ -70,6 +72,6 @@ def scrape_quality_of_life_index(url, year_latest, path):
                                 'Healthcare Index': health, 'Cost of Living Index': col,
                                 'Property Price to Income Ratio': property_income, 'Traffic Commute Time Index': traffic,
                                 'Pollution Index': pollution, 'Climate Index': climate})
-    path = path.format(year)
-    quality_of_life_index_to_csv(quality_of_lives, path)
+
+        quality_of_life_index_to_csv(quality_of_lives, path.format(year))
 
