@@ -19,7 +19,7 @@ def generate_quality_of_life_tuple(quality_of_lives):
              ) for quality_of_life in quality_of_lives]
 
 def quality_of_life_index_to_csv(quality_of_lives, path):
-    with open(path, "w+", encoding="utf-8") as out_file:
+    with open(path, 'w+', encoding='utf-8') as out_file:
         csv_writer = csv.writer(out_file, quoting=csv.QUOTE_ALL)
 
         csv_writer.writerow(['City', 'Country', 'Quality of Life Index', 'Purchasing Power Index',
@@ -39,7 +39,7 @@ def scrape_quality_of_life_index(url, year_latest, path):
         quality_of_lives = []
         year = year - 1
         # creating url for each year
-        url_yearly = url + "?title=" + str(year)
+        url_yearly = url + '?title=' + str(year)
         data = requests.get(url_yearly).text
 
         # Creating BeautifulSoup object for each yearly data

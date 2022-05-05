@@ -11,7 +11,7 @@ def generate_continent_tuple(continents):
 
 
 def continent_to_csv(continents, path):
-    with open(path, "w+", encoding="utf-8") as out_file:
+    with open(path, 'w+', encoding='utf-8') as out_file:
         csv_writer = csv.writer(out_file, quoting=csv.QUOTE_ALL)
 
         csv_writer.writerow(['City', 'Country', 'Continent'])
