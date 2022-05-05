@@ -1,8 +1,9 @@
 ### Importing the required libraries
 import requests
 from bs4 import BeautifulSoup
-from .scrape_quality_of_life_data import scrape_quality_of_life_index
-from .scrape_continents_data import scrape_continent
+from scrape_quality_of_life_data import scrape_quality_of_life_index
+from scrape_continents_data import scrape_continent
+import os
 
 BASE_DIR = "csv_data"
 quality_of_life_index_csv_path = os.path.join(BASE_DIR, "quality_of_life_index_{}.csv")
