@@ -234,11 +234,11 @@ def app():
 
     with a1:
         st.write('North America')
-        st.write(get_conti_top10_ranking(year, 'America'))
+        st.write(get_conti_top10_ranking(year, 'North America'))
         
     with a2:
         st.write('Latin America')
-        st.write(get_conti_top10_ranking(year, 'America'))
+        st.write(get_conti_top10_ranking(year, 'Latin America'))
         
     with a3:
         st.write('Europe')
