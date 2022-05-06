@@ -75,7 +75,7 @@
 
 ## Extensions of Dataset that Would be Required to Improve the Analysis
 #### [USA]
-- To improve accuracy of the indexed, particularly those data based surveys, we can look into ‘National Health Interview Survey’ and match similar questions in Numbeo survey to see they are consistent. As for ‘Pollution Index’ we can compare it with outside sources such as ‘Pollution Rankings’ researched by U.S. News.
+- To improve accuracy of the indexes, particularly those data based surveys, we can look into ‘National Health Interview Survey’ and match similar questions in Numbeo survey to see they are consistent. As for ‘Pollution Index’ we can compare it with outside sources such as ‘Pollution Rankings’ researched by U.S. News.
 
 ## Areas for more research
 - Data such as ‘change in population’ and ‘rate of population influx/outflux’ can be matched with the ‘change in the ranking on Quality of Life’ of each city to see the correlation. This could be developed further into modeling.
