@@ -97,7 +97,7 @@ URL : https://github.com/adamysyim/eco395m-final-project--quality-of-life
 |**1. Data Acquisition : web-scraping(Beautifulsoup)** | | 
 |**Run** ```main.py``` |```../01_web-scraping/01_code```| 
 |Results : csv files 
-_quality_of_life_index_2018.csv, quality_of_life_index_2019.csv, quality_of_life_index_2020.csv, quality_of_life_index_2021.csv, quality_of_life_index_2022.csv, list_city_country_continent_Africa.csv, list_city_country_continent_America.csv, list_city_country_continent_Asia.csv, list_city_country_continent_Europe.csv, list_city_country_continent_Oceania.csv_ |```../01_web-scraping/02_data)```) |
+_quality_of_life_index_2018.csv, quality_of_life_index_2019.csv, quality_of_life_index_2020.csv, quality_of_life_index_2021.csv, quality_of_life_index_2022.csv, list_city_country_continent_Africa.csv, list_city_country_continent_America.csv, list_city_country_continent_Asia.csv, list_city_country_continent_Europe.csv, list_city_country_continent_Oceania.csv_ |```../01_web-scraping/02_results(csv)```|
 |**2. Data Wrangling : SQL and Pandas** | |
 |Go to GCP—SQL and create Database **1.** Remove headers in each csv files which are produced through web-scraping, **2.** Import no-header csv files to the Database, **3.** **Run** codes in ```data-wrangling.sql``` step by step as instructed in the file  | ```../02_data_wrangling/01_code(sql)```|
 |Results : csv files 
