@@ -1,6 +1,6 @@
 City,Country,Continent,Latitude,Longitude
 Tucson,United States,North America,32.2228765,-110.9748477
-San Jose,Costa Rica,Lain America,9.9325427,-84.0795782
+San Jose,Costa Rica,Latin America,9.9325427,-84.0795782
 Miami,United States,North America,25.7741728,-80.19362
 Nizhny Novgorod,Russia,Europe,56.3264816,44.0051395
 Rotterdam,Netherlands,Europe,51.9244424,4.47775
@@ -16,7 +16,7 @@ Tallinn,Estonia,Europe,59.4372155,24.7453688
 Prague,Czech Republic,Europe,50.0596288,14.446459273258009
 Varna,Bulgaria,Europe,43.2073873,27.9166653
 Reno,United States,North America,39.5261206,-119.8126581
-Odessa (Odesa),Ukraine,Europe,46.4843023,30.7322878
+Odessa (Odesa),Ukraine,Europe,46.48590215,30.68363780440557
 Johannesburg,South Africa,Africa,-26.205,28.049722
 Albuquerque,United States,North America,35.0841034,-106.650985
 Dusseldorf,Germany,Europe,51.2254018,6.7763137
@@ -27,7 +27,7 @@ Casablanca,Morocco,Africa,33.5675527,-7.618756606822727
 Iasi,Romania,Europe,47.1615341,27.5836142
 Dnipro,Ukraine,Europe,48.4680221,35.0417711
 Hamburg,Germany,Europe,53.550341,10.000654
-Recife,Brazil,Lain America,-8.0584933,-34.8848193
+Recife,Brazil,Latin America,-8.0584933,-34.8848193
 Kuwait City,Kuwait,Asia,29.3797091,47.9735629
 Davao,Philippines,Asia,7.0645451,125.6084371
 Boston,United States,North America,42.3602534,-71.0582912
@@ -45,7 +45,7 @@ Bangkok,Thailand,Asia,13.7525438,100.4934734
 Cambridge,United Kingdom,Europe,52.2055314,0.1186637
 Pretoria,South Africa,Africa,-25.7459277,28.1879101
 Barcelona,Spain,Europe,41.3828939,2.1774322
-Florianopolis,Brazil,Lain America,-27.5973002,-48.5496098
+Florianopolis,Brazil,Latin America,-27.5973002,-48.5496098
 Limassol,Cyprus,Asia,34.6852901,33.0332657
 Rome,Italy,Europe,41.8933203,12.4829321
 Winnipeg,Canada,North America,49.8955367,-97.1384584
@@ -54,7 +54,7 @@ Jeddah (Jiddah),Saudi Arabia,Asia,21.483715949999997,39.17290852271105
 Liverpool,United Kingdom,Europe,53.4071991,-2.99168
 Brno,Czech Republic,Europe,49.1922443,16.6113382
 Richmond,United States,North America,37.5385087,-77.43428
-Panama City,Panama,Lain America,30.1600827,-85.6545729
+Panama City,Panama,Latin America,30.1600827,-85.6545729
 Split,Croatia,Europe,43.5116383,16.4399659
 Zurich,Switzerland,Europe,47.3744489,8.5410422
 Dhaka,Bangladesh,Asia,23.7861979,90.4026151
@@ -66,13 +66,13 @@ Bangalore,India,Asia,12.9767936,77.590082
 Oslo,Norway,Europe,59.9133301,10.7389701
 Minneapolis,United States,North America,44.9772995,-93.2654692
 Edinburgh,United Kingdom,Europe,55.9533456,-3.1883749
-Lima,Peru,Lain America,-12.0621065,-77.0365256
+Lima,Peru,Latin America,-12.0621065,-77.0365256
 Bologna,Italy,Europe,44.4938203,11.3426327
 Amman,Jordan,Asia,31.9515694,35.9239625
-Medellin,Colombia,Lain America,6.2443382,-75.573553
+Medellin,Colombia,Latin America,6.2443382,-75.573553
 Jacksonville,United States,North America,30.3321838,-81.655651
 The Hague (Den Haag),Netherlands,Europe,52.0799838,4.3113461
-Porto Alegre,Brazil,Lain America,-30.0324999,-51.2303767
+Porto Alegre,Brazil,Latin America,-30.0324999,-51.2303767
 Luxembourg,Luxembourg,Europe,49.6112768,6.129799
 Montreal,Canada,North America,45.5031824,-73.5698065
 Basel,Switzerland,Europe,47.5581077,7.5878261
@@ -110,7 +110,7 @@ Kolkata,India,Asia,22.5414185,88.35769124388872
 Gurgaon,India,Asia,28.42826235,77.00270014657752
 Bursa,Turkey,Asia,40.1827657,29.0677305
 Dallas,United States,North America,32.7762719,-96.7968559
-Monterrey,Mexico,Lain America,25.6802019,-100.315258
+Monterrey,Mexico,Latin America,25.6802019,-100.315258
 Lahore,Pakistan,Asia,31.5656822,74.3141829
 Ho Chi Minh City,Vietnam,Asia,10.7715512,106.6983801
 Washington,United States,North America,38.8950368,-77.0365427
@@ -125,7 +125,7 @@ Berlin,Germany,Europe,52.5170365,13.3888599
 Denver,United States,North America,39.7392364,-104.9848623
 Madison,United States,North America,43.074761,-89.3837613
 Brussels,Belgium,Europe,50.8465573,4.351697
-Buenos Aires,Argentina,Lain America,-34.6075682,-58.4370894
+Buenos Aires,Argentina,Latin America,-34.6075682,-58.4370894
 Beirut,Lebanon,Asia,33.88922645,35.50255852895232
 Belfast,United Kingdom,Europe,54.596391,-5.9301829
 Lyon,France,Europe,45.7578137,4.8320114
@@ -134,7 +134,7 @@ Kathmandu,Nepal,Asia,27.708317,85.3205817
 Muscat,Oman,Asia,23.61515,58.5912467
 Delhi,India,Asia,28.6517178,77.2219388
 Madrid,Spain,Europe,40.4167047,-3.7035825
-Queretaro,Mexico,Lain America,20.5927744,-100.3902245
+Queretaro,Mexico,Latin America,20.5927744,-100.3902245
 Jakarta,Indonesia,Asia,-6.1753942,106.827183
 Novi Sad,Serbia,Europe,45.2551338,19.8451756
 Mangalore,India,Asia,12.8698101,74.8430082
@@ -145,20 +145,20 @@ Lviv,Ukraine,Europe,49.841952,24.0315921
 Salt Lake City,United States,North America,40.7596198,-111.8867975
 Athens,Greece,Europe,37.9839412,23.7283052
 Tokyo,Japan,Asia,35.6828387,139.7594549
-Santiago,Chile,Lain America,-33.4377756,-70.6504502
+Santiago,Chile,Latin America,-33.4377756,-70.6504502
 Nashville,United States,North America,36.1622767,-86.7742984
 Poznan,Poland,Europe,52.4006632,16.91973259178088
 Baltimore,United States,North America,39.2908816,-76.610759
 Astana (Nur-Sultan),Kazakhstan,Asia,51.1282205,71.4306682
 Honolulu,United States,North America,21.2890997,-157.717299
-Montevideo,Uruguay,Lain America,-34.9058916,-56.1913095
+Montevideo,Uruguay,Latin America,-34.9058916,-56.1913095
 Sarajevo,Bosnia And Herzegovina,Europe,43.8519774,18.3866868
 Ahmedabad,India,Asia,23.0216238,72.5797068
 Bucharest,Romania,Europe,44.4361414,26.1027202
 Yerevan,Armenia,Asia,40.1776245,44.5126174
 Warsaw,Poland,Europe,52.2319581,21.0067249
-Belo Horizonte,Brazil,Lain America,-19.9227318,-43.9450948
-Guadalajara,Mexico,Lain America,20.6720375,-103.338396
+Belo Horizonte,Brazil,Latin America,-19.9227318,-43.9450948
+Guadalajara,Mexico,Latin America,20.6720375,-103.338396
 Adelaide,Australia,Oceania,-34.9281805,138.5999312
 Houston,United States,North America,29.7589382,-95.3676974
 Bergen,Norway,Europe,60.3943055,5.3259192
@@ -171,7 +171,7 @@ San Diego,United States,North America,32.7174202,-117.1627728
 Brisbane,Australia,Oceania,-27.4689682,153.0234991
 Sacramento,United States,North America,38.5810606,-121.493895
 Buffalo,United States,North America,42.8867166,-78.8783922
-San Juan,Puerto Rico,Lain America,18.465299,-66.116666
+San Juan,Puerto Rico,Latin America,18.465299,-66.116666
 San Antonio,United States,North America,29.4246002,-98.4951405
 Novosibirsk,Russia,Europe,55.0282171,82.9234509
 Boise,United States,North America,43.6166163,-116.200886
@@ -200,27 +200,27 @@ Milwaukee,United States,North America,43.0349931,-87.922497
 Vancouver,Canada,North America,49.2608724,-123.113952
 Vienna,Austria,Europe,48.2083537,16.3725042
 Oakland,United States,North America,37.8044557,-122.2713563
-Rio de Janeiro,Brazil,Lain America,-22.9110137,-43.2093727
+Rio de Janeiro,Brazil,Latin America,-22.9110137,-43.2093727
 Mississauga,Canada,North America,43.5896231,-79.6443879
 Spokane,United States,North America,47.6571934,-117.4235106
 Noida,India,Asia,28.5707841,77.3271074
-Singapore,Singapore,Asia,1.357107,103.8194992
+Singapore,Singapore,Asia,1.2899175,103.8519072
 Quebec City,Canada,North America,46.8183175,-71.2143518
 Ankara,Turkey,Asia,39.9207886,32.8540482
 Antwerp,Belgium,Europe,51.2211097,4.3997081
 Valencia,Spain,Europe,39.4697065,-0.3763353
-Campinas,Brazil,Lain America,-22.90556,-47.06083
+Campinas,Brazil,Latin America,-22.90556,-47.06083
 Indianapolis,United States,North America,39.7683331,-86.1583502
-Brasilia,Brazil,Lain America,-10.3333333,-53.2
+Brasilia,Brazil,Latin America,-10.3333333,-53.2
 Columbus,United States,North America,39.9622601,-83.0007065
-Caracas,Venezuela,Lain America,10.506098,-66.9146017
+Caracas,Venezuela,Latin America,10.506098,-66.9146017
 Detroit,United States,North America,42.3315509,-83.0466403
 Sydney,Australia,Oceania,-33.8698439,151.2082848
 Abu Dhabi,United Arab Emirates,Asia,24.4538352,54.3774014
 Hanoi,Vietnam,Asia,21.0294498,105.8544441
 Chiang Mai,Thailand,Asia,18.7882778,98.9858802
 Colombo,Sri Lanka,Asia,6.9387469,79.8541134
-Guatemala City,Guatemala,Lain America,14.6222328,-90.5185188
+Guatemala City,Guatemala,Latin America,14.6222328,-90.5185188
 Auckland,New Zealand,Oceania,-36.852095,174.7631803
 London,United Kingdom,Europe,51.5073219,-0.1276474
 Victoria,Canada,North America,48.4283182,-123.3649533
@@ -230,8 +230,8 @@ Philadelphia,United States,North America,39.9527237,-75.1635262
 Haifa,Israel,Asia,32.8191218,34.9983856
 New York,United States,North America,40.7127281,-74.0060152
 Stockholm,Sweden,Europe,59.3251172,18.0710935
-Sao Paulo,Brazil,Lain America,-23.5506507,-46.6333824
-Mexico City,Mexico,Lain America,19.4326296,-99.1331785
+Sao Paulo,Brazil,Latin America,-23.5506507,-46.6333824
+Mexico City,Mexico,Latin America,19.4326296,-99.1331785
 Krakow (Cracow),Poland,Europe,50.047136,19.8896389
 Manila,Philippines,Asia,14.5948914,120.9782618
 Turin,Italy,Europe,45.0677551,7.6824892
@@ -246,15 +246,15 @@ Charlotte,United States,North America,35.2272086,-80.8430827
 Shenzhen,China,Asia,22.5445741,114.0545429
 Durban,South Africa,Africa,-29.861825,31.009909
 Taipei,Taiwan,Asia,25.0375198,121.5636796
-Curitiba,Brazil,Lain America,-25.4295963,-49.2712724
+Curitiba,Brazil,Latin America,-25.4295963,-49.2712724
 Cape Town,South Africa,Africa,-33.928992,18.417396
 Karachi,Pakistan,Asia,24.8546842,67.0207055
-Bogota,Colombia,Lain America,4.6533326,-74.083652
+Bogota,Colombia,Latin America,4.6533326,-74.083652
 Ljubljana,Slovenia,Europe,46.0500268,14.5069289
 Tehran,Iran,Asia,35.6892523,51.3896004
 Hong Kong,Hong Kong,Asia,22.2793278,114.1628131
 Cork,Ireland,Europe,51.897077,-8.4654674
-Quito,Ecuador,Lain America,-0.2201641,-78.5123274
+Quito,Ecuador,Latin America,-0.2201641,-78.5123274
 Kuala Lumpur,Malaysia,Asia,3.1516964,101.6942371
 Budapest,Hungary,Europe,47.4979937,19.0403594
 Cairo,Egypt,Africa,30.0443879,31.2357257

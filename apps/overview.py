@@ -205,7 +205,7 @@ def app():
 
     st.subheader('Top 5 cities in each continent' + ' (' + f'{year}' + ')')
     
-    def get_conti_top10_ranking(year, continent):
+    def get_conti_top5_ranking(year, continent):
 
         numb_cities = 5 #top5
 
@@ -234,27 +234,27 @@ def app():
 
     with a1:
         st.write('North America')
-        st.write(get_conti_top10_ranking(year, 'North America'))
+        st.write(get_conti_top5_ranking(year, 'North America'))
         
     with a2:
         st.write('Latin America')
-        st.write(get_conti_top10_ranking(year, 'Latin America'))
+        st.write(get_conti_top5_ranking(year, 'Latin America'))
         
     with a3:
         st.write('Europe')
-        st.write(get_conti_top10_ranking(year, 'Europe'))
+        st.write(get_conti_top5_ranking(year, 'Europe'))
 
         
     a1, a2, a3 = st.columns(3)
 
     with a1:
         st.write('Asia')
-        st.write(get_conti_top10_ranking(year, 'Asia'))
+        st.write(get_conti_top5_ranking(year, 'Asia'))
     
     with a2:
         st.write('Africa')
-        st.write(get_conti_top10_ranking(year, 'Africa'))
+        st.write(get_conti_top5_ranking(year, 'Africa'))
         
     with a3:
         st.write('Oceania')
-        st.write(get_conti_top10_ranking(year, 'Oceania'))
+        st.write(get_conti_top5_ranking(year, 'Oceania'))
