@@ -71,7 +71,7 @@ def app():
     x = qol_scale['Longitude']
     y = qol_scale['Latitude']
     z = qol_scale['Quality of Life Index']
-    plt.scatter(x, y, s=0.5*z, c=z, alpha=0.9, vmin=0, vmax=100, cmap='autumn')
+    plt.scatter(x, y, s=0.5*z, c=z, alpha=0.9, vmin=0, vmax=100, cmap='afmhot')
     plt.colorbar(label='Quality of Life Index', shrink=.56)
 
     # Creating axis limits and title
@@ -233,30 +233,28 @@ def app():
     a1, a2, a3 = st.columns(3)
 
     with a1:
-        st.write('America')
+        st.write('North America')
         st.write(get_conti_top10_ranking(year, 'America'))
         
-
     with a2:
+        st.write('Latin America')
+        st.write(get_conti_top10_ranking(year, 'America'))
+        
+    with a3:
         st.write('Europe')
         st.write(get_conti_top10_ranking(year, 'Europe'))
 
         
-    with a3:
-        st.write('Asia')
-        st.write(get_conti_top10_ranking(year, 'Asia'))
-
-
     a1, a2, a3 = st.columns(3)
 
     with a1:
+        st.write('Asia')
+        st.write(get_conti_top10_ranking(year, 'Asia'))
+    
+    with a2:
         st.write('Africa')
         st.write(get_conti_top10_ranking(year, 'Africa'))
         
-
-    with a2:
+    with a3:
         st.write('Oceania')
         st.write(get_conti_top10_ranking(year, 'Oceania'))
-
-    with a3:
-        st.write('')
