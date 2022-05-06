@@ -1,9 +1,7 @@
-# quality-of-life-eco395m-final
-
 ## The goal of the Project
 - Today, more than 50% of the world's population lives in cities. It is highly likely that your quality of life depends on what city you live. We want to find out what are the best cities to live, what are the factors that affect the quality of life in that cities, how the ranking of some of those cities change over the last 5 years. 
 - Given that everyone has different preferences and needs, we focus mainly on providing individual-friendly interactive graphs and tables with search options.
-- As for data analysis, we wouuld like to show the various aspects of the indexes that comprise "Quality of Life Index" described below.  
+- As for data analysis, we would like to show the various aspects of the indexes that comprise "Quality of Life Index" described below.  
 
 ## Source of the Dataset
 - Quality of Life Index (higher is better) is an estimation of overall quality of life by using an empirical formula which takes into account purchasing power index (higher is better), pollution index (lower is better), house price to income ratio (lower is better), cost of living index (lower is better), safety index (higher is better), health care index (higher is better), traffic commute time index (lower is better) and climate index (higher is better).
@@ -36,35 +34,60 @@
 1. Web-scrape the data using Beautiful soup
 2. Load the data on GCP database and reorganize them by using SQL  
 3. Further replenish the data: adding geometrical information(longitude, latitude) for geopraphic presentation, recategorize some features for more accurate depiction of the overall information, etc.
-4. Analyze the data and show different aspects of the indexes 
-5. Visualize the information with reader-freiendly graphs and tables
-6. Build intereactive dashboard using Streamlit
+  - for ease of analysis and visualization, indexes are scaled with min-max normalization method. Also, when scaled, all the indexes are adjusted so that higher number reflects better condition.
+5. Analyze the data and show different aspects of the indexes 
+6. Visualize the information with reader-freiendly graphs and tables
+7. Build intereactive dashboard using Streamlit
 
 ##  Findings and Analysis
 
+#### [World]
+- The data contains Quality of Life Index and its sub-indexes across 255 cities in the world in 2022. The number of cities surveyed has grown for the last 5 years (184 in 2018)
+- Most of the high ranking cities are in North America and Europe
+  - Top 50 :  North America(50%), Europe(34%), Oceania(14%), Asia(0.02%)
+  - Top 100 : North America(50%), Europe(37%), Oceania(8%), Asia(4%), Latin America(1%) 
 
-## Extensions of your analysis or areas for more research must be included in your report
+<img width="709" alt="Quality of Living Index Worldwide" src="https://user-images.githubusercontent.com/97976503/167204536-6376069f-0ef9-480f-b152-71c9910d2572.png">
+
+#### [USA] If we look at data for USA cities alone,
+- There are 51 cities recorded in 2022(32 in 2018)
+
+<img width="543" alt="Quality of Living Index USA" src="https://user-images.githubusercontent.com/97976503/167204812-7733f2cc-05d2-49ae-a931-b27277d7b0e0.png">
+
+- For the last 5 years, the average Quality of Life Index increased by 8.5%. 
+  - Purchasing Power Index decreased by 11.3% reflecting that the average net salary’s buying power of necessary goods and services has declined across those cities
+  - Traffic Commute Time Index rose 64.6% contributing in large portion to the increase in overall Quality of Life Index
+- Top 5 most livable cities in 2022 are: Raleigh, Columbus, Madison, Austin, Charlotte. Whereas, bottom 5 are: Detroit, New York, Los Angeles, Philadelphia, Miami. Most of the low ranking cities have poor scores on Purchasing Power Index. 
 
 
+#### [Individual City] By exploring our interactive dashboard, you can choose whatever city you like and see the results. Here, we provide the result for Austin, Texas.
+- Austin ranks 4th highest Quality of Life in the USA(7th in the world). For the last five years, Austin has maintained its ranking within top10 
+- Compared to the US average of each index, Austin has better numbers on every index. Particularly, Austin has strong point on Purchasing Power Index, 158.21, which means the inhabitants of Austin with an average salary can afford to buy on an average 58% more goods and services than New York City residents with an average salary. Also, Austin has high points on the Safety Index which is 15% higher than the national average.
+
+<img width="468" alt="spider chart austin" src="https://user-images.githubusercontent.com/97976503/167204745-38336b86-6749-4096-a20d-5cf23ec4ebd0.png">
+
+- However, during the last five years, the Health Care Index showed the most decline in ranking, from 5 to 24. The pollution Index ranking also showed deterioration, from 10 to 24.
 
 ## Limitations of the Dataset
-### Some indexes are based on surveys. Therefore in general, 
-- There is always a risk that people will provide dishonest answers.
-- There can be differences in how people understand the survey questions.
-- Some respondents will choose answers before reading the questions.
-- Surveys don’t provide the same level of personalization.
+- Some indexes are based on surveys. Therefore, there is always a risk that people will provide dishonest answers and there can be differences in how people understand the survey questions. Surveys don’t provide the same level of personalization.
+- Some of the indexes are based on surveys that are written in English. This bias caused by largely English-speaking respondents can be corrected by having multi-language surveys.
+- The distribution of ‘Property Price to Income Ratio’ has a skewness of 2.2 (Fisher's moment coefficient of skewness) which is too large. Considering the fact that relative ranking is the main purpose of this analysis, the skewness might distort the result of the analysis. We have to first see if those extreme numbers are consistent with the actual situations in those cities. If not, we have to drop those numbers for a more accurate analysis. 
 
-## Discussion of Extensions of Dataset that Would be Required to Improve the Analysis
+## Extensions of Dataset that Would be Required to Improve the Analysis
+#### [USA]
+- To improve accuracy of the indexed, particularly those data based surveys, we can look into ‘National Health Interview Survey’ and match similar questions in Numbeo survey to see they are consistent. As for ‘Pollution Index’ we can compare it with outside sources such as ‘Pollution Rankings’ researched by U.S. News.
+
+## Areas for more research
+- Data such as ‘change in population’ and ‘rate of population influx/outflux’ can be matched with the ‘change in the ranking on Quality of Life’ of each city to see the correlation. This could be developed further into modeling.
 
 
-
-## Instructions to Rerun the Analysis
+# Instructions to Rerun the Analysis
 
 #### Environment and Setup
 1. Open the GCP Vertex AI. Choose the Jupyter Lab.
 2. Fork and Git-Clone the repository into the Jupyter Lab
 
-URL : https://github.com/adamysyim/quality-of-life-eco395m-final
+URL : https://github.com/adamysyim/eco395m-final-project--quality-of-life
 
 #### How to rerun
 
@@ -74,16 +97,29 @@ URL : https://github.com/adamysyim/quality-of-life-eco395m-final
 |**1. Data Acquisition : web-scraping(Beautifulsoup)** | | 
 |**Run** ```main.py``` |```../01_web-scraping/01_code```| 
 |Results : csv files 
-_quality_of_life_index_2018.csv, quality_of_life_index_2019.csv, quality_of_life_index_2020.csv, quality_of_life_index_2021.csv, quality_of_life_index_2022.csv, list_city_country_continent_Africa.csv, list_city_country_continent_America.csv, list_city_country_continent_Asia.csv, list_city_country_continent_Europe.csv, list_city_country_continent_Oceania.csv_ |```../01_web-scraping/02_data```|
+_quality_of_life_index_2018.csv, quality_of_life_index_2019.csv, quality_of_life_index_2020.csv, quality_of_life_index_2021.csv, quality_of_life_index_2022.csv, list_city_country_continent_Africa.csv, list_city_country_continent_America.csv, list_city_country_continent_Asia.csv, list_city_country_continent_Europe.csv, list_city_country_continent_Oceania.csv_ |```../01_web-scraping/02_data)```) |
 |**2. Data Wrangling : SQL and Pandas** | |
-|Go to GCP—SQL and create Database **1.** Remove headers in each csv files which are produced through web-scraping, **2.** Import no-header csv files to the Database, **3.** **Run** codes in ```data-wrangling.sql``` through DBeaver step by step as instructed in the file  | ```../02_data_wrangling/01_code(sql)```|
+|Go to GCP—SQL and create Database **1.** Remove headers in each csv files which are produced through web-scraping, **2.** Import no-header csv files to the Database, **3.** **Run** codes in ```data-wrangling.sql``` step by step as instructed in the file  | ```../02_data_wrangling/01_code(sql)```|
 |Results : csv files 
 _city_country_list.csv, quality_of_life_index_2018.csv, quality_of_life_index_2019.csv, quality_of_life_index_2020.csv, quality_of_life_index_2021.csv, quality_of_life_index_2022.csv, quality_of_life_index_5yrs.csv_|```../02_data_wrangling/02_data```| 
 |**Run** ```data-wrangling.ipynb```|```../02_data_wrangling/03_code(pandas)``` |
 |Results : csv files 
 _lat_long.csv, quality_of_life_index_5yrs_original_geo.csv, quality_of_life_index_5yrs_ranking_USA.csv, quality_of_life_index_5yrs_ranking_world.csv, quality_of_life_index_5yrs_scale_geo_USA.csv, quality_of_life_index_5yrs_scale_geo.csv_|```../02_data_wrangling/04_data```|
 |**3. Data Analysis and Results : Pandas**||
-|**Run** ```1.Basic Statistics of the data.ipynb```, **Run** ```2._World.ipynb```, **Run** ```3._USA.ipynb```, **Run** ```4._Individual city in US.ipynb``` Each cell in jupyter notebook produces analysis result or visualization |```../03_data analysis and visualization```
+|**Run** ```1.Basic Statistics of the data.ipynb```, **Run** ```2._World.ipynb```, **Run** ```3._USA.ipynb```, **Run** ```4._Individual city in US.ipynb```   |```../03_data analysis and visualization```
 |** Interactive Dashboard : Steamlit**||
-|**Run** ```app.py```, the relevant command is ```streamlit run```(streamlit run does not work on GCP, you have to run it local). OR you can visit [this LINK](https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py) to interact with the **dashboard** |```main directory```|
-Link URL : https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py
+|**Run** ```app.py```, the relevant command is ```streamlit run```. OR you can visit ```https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py``` to interact with the **dashboard** |```main directory```|
+
+
+#### Code writers 
+
+**This is provided to help graders when assessing individual contributions to coding**
+
+| **Directory** | **Code File** | **Writer Name** | **GitHub Account Name** |
+| :---     |    :----     | :---     |    :----     |
+| ```../01_web-scraping/01_code``` | ```main.py```, ```scrape_continents_data.py```, ```scrape_quality_of_life_data.py``` | Ashesh Shrestha | AsheshShrestha7 |
+| ```../02_data-wrangling/01_code``` | ```data-wrangling.sql``` | Seungwoon Shin | skmanzg |
+| ```../02_data-wrangling/03_code``` | ```data-wrangling.ipynb``` | Jiyou Chen | jaredchen1124 |
+| ```../03_data analysis and visualization/``` | ```01_Basic Statistics of the data.ipynb``` | Xuezhou Chong | ChloeChong01 |
+| ```../03_data analysis and visualization/``` | ```02_World.ipynb```, ```03_USA.ipynb```, ```04_Individual city in US.ipynb``` | Youngseok Yim | adamysyim |
+| ```../04_data analysis and visualization/``` | ```app.py```, ```multiapp.py```, ```compare.py```, ```individual.py```, ```overview.py``` | Youngseok Yim | adamysyim |
