@@ -42,11 +42,9 @@ CREATE TABLE list_city_country_continent_Oceania (
  
    
 -- For each table above, 
--- 1. PLEASE go to GCP SQL, 
--- 2. Create new database
--- 3. Upload no-header csv files that are made from web-scraped csv to GCP Cloud Storage
--- 4. Import each no-header csv files to match each table
-
+-- 1. PLEASE go to GCP SQL
+-- 2. Import each no-header csv files to each table
+-- 3. Refresh each table
    
 -- creating table for the final merge   
    
@@ -56,7 +54,6 @@ CREATE TABLE list_city_country_continent_full (
     "Continent" varchar(50)
     ); 
     
-   
    
 -- merging city-country-continent list tables to "list_city_country_continent_full" table
 
@@ -119,9 +116,9 @@ CREATE TABLE quality_of_life_index_2022 (
     );
    
 -- For table above, 
--- 1. PLEASE go to GCP SQL, 
--- 2. Upload no-header csv files that are made from web-scraped csv to GCP Cloud Storage
--- 3. Import each no-header csv files to match each table
+-- 1. PLEASE go to GCP SQL
+-- 2. Import no-header csv files to the table
+-- 3. Refresh table
    
    
 -- add relevant year 
@@ -184,10 +181,9 @@ CREATE TABLE quality_of_life_index_2021 (
     );
 
 -- For table above, 
--- 1. PLEASE go to GCP SQL, 
--- 2. Upload no-header csv files that are made from web-scraped csv to GCP Cloud Storage
--- 3. Import each no-header csv files to match each table 
-   
+-- 1. PLEASE go to GCP SQL
+-- 2. Import no-header csv files to the table
+-- 3. Refresh table
    
 -- add relevant year 
 
@@ -248,9 +244,9 @@ CREATE TABLE quality_of_life_index_2020 (
     );
    
 -- For table above, 
--- 1. PLEASE go to GCP SQL, 
--- 2. Upload no-header csv files that are made from web-scraped csv to GCP Cloud Storage
--- 3. Import each no-header csv files to match each table    
+-- 1. PLEASE go to GCP SQL
+-- 2. Import no-header csv files to the table
+-- 3. Refresh table
    
 -- add relevant year 
 
@@ -295,7 +291,7 @@ select "City",
 FROM qol_20_continent;
 
 
--- for for 2019 data, create columns and import no-header files from GCP --
+-- for 2019 data, create columns and import no-header files from GCP --
         
 CREATE TABLE quality_of_life_index_2019 (
     "City" varchar(50),
@@ -431,5 +427,15 @@ FROM qol_18_continent;
 select * into city_country_continent_list from (select distinct "City", "Country", "Continent" from quality_of_life_index_5yrs) a;
         
         
-        
+-- export following tables(in csv file format) and store them in "02_data-wrangling/02_data"  
+
+-- city_country_continent_list.csv
+-- quality_of_life_index_2018.csv
+-- quality_of_life_index_2019.csv
+-- quality_of_life_index_2020.csv
+-- quality_of_life_index_2021.csv
+-- quality_of_life_index_2022.csv
+-- quality_of_life_index_5yrs.csv
+
+
         
