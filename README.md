@@ -1,7 +1,7 @@
 ## The goal of the Project
 - Today, more than 50% of the world's population lives in cities. It is highly likely that your quality of life depends on what city you live. We want to find out what are the best cities to live, what are the factors that affect the quality of life in that cities, how the ranking of some of those cities change over the last 5 years. 
-- Given that everyone has different preferences and needs, we focus mainly on providing individual-friendly interactive graphs and tables with search options.
-- As for data analysis, we would like to show the various aspects of the indexes that comprise "Quality of Life Index" described below.  
+- Given that everyone has different preferences and needs, we focus mainly on providing user-friendly interactive graphs and tables with search options.
+- As for overall data analysis, we would like to show "Quality of Life Index" of each city worldwide and USA-wide.   
 
 ## Source of the Dataset
 - Quality of Life Index (higher is better) is an estimation of overall quality of life by using an empirical formula which takes into account purchasing power index (higher is better), pollution index (lower is better), house price to income ratio (lower is better), cost of living index (lower is better), safety index (higher is better), health care index (higher is better), traffic commute time index (lower is better) and climate index (higher is better).
@@ -31,13 +31,18 @@
 | **Climate Index**| produced by a formula which uses dew point and temperature (and estimated avg. high humidex using those two numbers) to estimate a climate index.|
 
 ## Methodology and Description of the Project 
-1. Web-scrape the data using Beautiful soup
+1. Web-scrape the original data using Beautiful soup
 2. Load the data on GCP database and reorganize them by using SQL  
-3. Further replenish the data: adding geometrical information(longitude, latitude) for geopraphic presentation, recategorize some features for more accurate depiction of the overall information, etc.
-  - for ease of analysis and visualization, indexes are scaled with min-max normalization method. Also, when scaled, all the indexes are adjusted so that higher number reflects better condition.
-5. Analyze the data and show different aspects of the indexes 
-6. Visualize the information with reader-freiendly graphs and tables
-7. Build intereactive dashboard using Streamlit
+3. Further replenish the data: 
+- add geometrical information(longitude, latitude) for geopraphic presentation
+- recategorize some features for more accurate depiction of the overall information
+- for ease of analysis and visualization, indexes are scaled with min-max normalization method. Also, when scaled, all the indexes are adjusted so that higher number reflects better condition.
+5. Analyze the data and show different aspects of the indexes in terms of:
+- Overall statistics
+- World
+- USA
+- Visualize the information with graphs and tables with options for the reader to choose the city and year of interest
+6. Build intereactive dashboard using Streamlit
 
 ##  Findings and Analysis
 
@@ -60,7 +65,7 @@
 - Top 5 most livable cities in 2022 are: Raleigh, Columbus, Madison, Austin, Charlotte. Whereas, bottom 5 are: Detroit, New York, Los Angeles, Philadelphia, Miami. Most of the low ranking cities have poor scores on Purchasing Power Index. 
 
 
-#### [Individual City] By exploring our interactive dashboard, you can choose whatever city you like and see the results. Here, we provide the result for Austin, Texas.
+#### [Individual City] By exploring our interactive dashboard, you can choose whatever city you like and see the results. Here, we provide the result for Austin, Texas as a representative.
 - Austin ranks 4th highest Quality of Life in the USA(7th in the world). For the last five years, Austin has maintained its ranking within top10 
 - Compared to the US average of each index, Austin has better numbers on every index. Particularly, Austin has strong point on Purchasing Power Index, 158.21, which means the inhabitants of Austin with an average salary can afford to buy on an average 58% more goods and services than New York City residents with an average salary. Also, Austin has high points on the Safety Index which is 15% higher than the national average.
 
@@ -89,26 +94,70 @@
 
 URL : https://github.com/adamysyim/eco395m-final-project--quality-of-life
 
-#### How to rerun
+## How to rerun
 
-|**Action** |**Directory**|
-| :---     |    :----     |
-|**0. Install** all the required packages, modules, and toolkits listed in **requirements.txt** in the terminal. Use ```Python pip3 install (packageName)``` command to install.|      |
-|**1. Data Acquisition : web-scraping(Beautifulsoup)** | | 
-|**Run** ```main.py``` |```../01_web-scraping/01_code```| 
-|Results : csv files 
-_quality_of_life_index_2018.csv, quality_of_life_index_2019.csv, quality_of_life_index_2020.csv, quality_of_life_index_2021.csv, quality_of_life_index_2022.csv, list_city_country_continent_Africa.csv, list_city_country_continent_America.csv, list_city_country_continent_Asia.csv, list_city_country_continent_Europe.csv, list_city_country_continent_Oceania.csv_ |```../01_web-scraping/02_results(csv)```|
-|**2. Data Wrangling : SQL and Pandas** | |
-|Go to GCP—SQL and create Database **1.** Remove headers in each csv files which are produced through web-scraping, **2.** Import no-header csv files to the Database, **3.** **Run** codes in ```data-wrangling.sql``` step by step as instructed in the file  | ```../02_data_wrangling/01_code(sql)```|
-|Results : csv files 
-_city_country_list.csv, quality_of_life_index_2018.csv, quality_of_life_index_2019.csv, quality_of_life_index_2020.csv, quality_of_life_index_2021.csv, quality_of_life_index_2022.csv, quality_of_life_index_5yrs.csv_|```../02_data_wrangling/02_data```| 
-|**Run** ```data-wrangling.ipynb```|```../02_data_wrangling/03_code(pandas)``` |
-|Results : csv files 
-_lat_long.csv, quality_of_life_index_5yrs_original_geo.csv, quality_of_life_index_5yrs_ranking_USA.csv, quality_of_life_index_5yrs_ranking_world.csv, quality_of_life_index_5yrs_scale_geo_USA.csv, quality_of_life_index_5yrs_scale_geo.csv_|```../02_data_wrangling/04_data```|
-|**3. Data Analysis and Results : Pandas**||
-|**Run** ```1.Basic Statistics of the data.ipynb```, **Run** ```2._World.ipynb```, **Run** ```3._USA.ipynb```, **Run** ```4._Individual city in US.ipynb```   |```../03_data analysis and visualization```
-|** Interactive Dashboard : Steamlit**||
-|**Run** ```app.py```, the relevant command is ```streamlit run```. OR you can visit ```https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py``` to interact with the **dashboard** |```main directory```|
+### 0. Installing packages
+- all the required packages, modules, and toolkits listed in **requirements.txt** in the terminal. Use ```Python pip3 install (packageName)``` command to install.
+
+### 1. Data Acquisition : web-scraping
+- **Run** ```main.py``` in ```../01_web-scraping/01_code``` 
+- Resulting csv files are automatically stored in ```../01_web-scraping/02_results(csv)```
+
+### 2. Data Wrangling : SQL and Pandas
+
+#### [SQL]
+This process is very tedious and takes some time. Please bear with us and follow the steps carefully. Or if you are short of time, you can skip this process and move directly to “02_data-wrangling/03_code(pandas)”
+
+**A. Setting up database instance in GCP and DBeaver**
+
+a) Create a database instance in Google Cloud Platform (GCP). If you've already done this, you can use the one you already have. Go to GCP SQL and create a PostgreSQL 13 database instance. Make sure that you whitelist the IPs in block 0.0.0.0/0. Picking the lowest spec for this instance will be sufficient for this problem. Save your password.
+
+b) Use GCP SQL to create a database called “final”. You can do this in the "Databases" tab.
+
+c) Connect to your database with DBeaver. Your host can be found in GCP SQL on the "Overview" tab. The port will be the default Postgres port: 5432. You can use the default postgres username, postgres, and the password you set in the last step. Connect with database as ‘final’.
+
+d) In DBeaver, Navigate to “final” > "Databases" > “final”. Right-click the database “final” -- its the one that looks like a silo. Then select "SQL Editor" > "New SQL Script".
+
+f) Copy the code in "02_data-wrangling/01_code/data-wrangling.sql into you SQL editor 
+
+g) Don’t execute them all at once. You have to execute each block of code by following instructions in the sql file
+
+**B. Uploading noheader files to database**
+
+a)  Remove the headers from each of CSVs in ```01_web-scraping/02_results(csv)```
+
+b) Create a bucket in GCP Cloud Storage (you can use an existing one if you like)
+
+c) Upload your headerless CSVs to the bucket.
+
+**C. Running SQL**
+
+a) please execute each block of code according to instructions(commented) in the SQL file
+
+b) export below tables and store them in ```02_data-wrangling/02_data``` as csv format
+  - city_country_continent_list.csv
+  - quality_of_life_index_2018.csv
+  - quality_of_life_index_2019.csv
+  - quality_of_life_index_2020.csv
+  - quality_of_life_index_2021.csv
+  - quality_of_life_index_2022.csv
+  - quality_of_life_index_5yrs.csv
+
+#### [Pandas]
+- **Run** ```../02_data_wrangling/03_code(pandas)/data-wrangling.ipynb```
+- (Reminder on part using Geopandas to obtain the latitude and longitude of each city: due to its inherenet characteristics, the process takes 2~3 minutes to complete)
+- Resulting csv files are automatically stored in ```../02_data_wrangling/04_data```
+
+### 3. Data Analysis and Results : Pandas
+(Each cell in jupyter notebooks produces unique analysis and visualizations of the data)
+- **Run** ```../03_data analysis and visualization/1.Basic Statistics of the data.ipynb```
+- **Run** ```../03_data analysis and visualization/2._World.ipynb```
+- **Run** ```../03_data analysis and visualization/3._USA.ipynb```
+- **Run** ```../03_data analysis and visualization/4._Individual city in US.ipynb``` 
+
+### 4. Interactive Dashboard : Steamlit**
+- Visit ```https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py``` to interact with the **dashboard**
+- You can **Run** ```../app.py```, the relevant command is ```streamlit run```. Please be reminded that ```streamlit run``` doesn't work in GCP environment. You have to clone the entire repo to your local storage and run ```streamlit run app.py``` locally. 
 
 
 #### Code writers 
@@ -119,7 +168,7 @@ _lat_long.csv, quality_of_life_index_5yrs_original_geo.csv, quality_of_life_inde
 | :---     |    :----     | :---     |    :----     |
 | ```../01_web-scraping/01_code``` | ```main.py```, ```scrape_continents_data.py```, ```scrape_quality_of_life_data.py``` | Ashesh Shrestha | AsheshShrestha7 |
 | ```../02_data-wrangling/01_code``` | ```data-wrangling.sql``` | Seungwoon Shin | skmanzg |
-| ```../02_data-wrangling/03_code``` | ```data-wrangling.ipynb``` | Jiyou Chen | jaredchen1124 |
+| ```../02_data-wrangling/03_code``` | ```data-wrangling.py``` | Jiyou Chen | jaredchen1124 |
 | ```../03_data analysis and visualization/``` | ```01_Basic Statistics of the data.ipynb``` | Xuezhou Chong | ChloeChong01 |
 | ```../03_data analysis and visualization/``` | ```02_World.ipynb```, ```03_USA.ipynb```, ```04_Individual city in US.ipynb``` | Youngseok Yim | adamysyim |
 | ```../04_data analysis and visualization/``` | ```app.py```, ```multiapp.py```, ```compare.py```, ```individual.py```, ```overview.py``` | Youngseok Yim | adamysyim |
