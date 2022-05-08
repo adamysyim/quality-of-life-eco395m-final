@@ -49,6 +49,7 @@
 #### [Indexes]
 - Economic Indexes (purchasing power index, property price to income ratios, cost of living index), by their nature, have correlation coefficient of more than 0.5
 - Purchasing power index-property price to income ratios: 0.6
+- Purchasing power index-cost of living index: 0.7
 
 #### [World]
 - The data contains Quality of Life Index and its sub-indexes across 255 cities in the world in 2022. The number of cities surveyed has grown for the last 5 years (184 in 2018)
