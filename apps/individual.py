@@ -106,22 +106,28 @@ def app():
 
     ## sub-section setting
     
+    df = pd.read_csv('02_data-wrangling/04_data/quality_of_life_index_5yrs_scale_geo.csv')
+    df = df[df['Year']==year]
+    df_us = df[df['Country'] == 'United States']
+    num_cities_world = len(df)
+    num_cities_us = len(df_us)
+
     if country == 'United States': 
 
         a1, a2 = st.columns((5,5))
 
         with a1:
-            st.write('World')
+            st.write('World' + ' (' + 'out of ' + str(num_cities_world) + ')')
             st.write(get_world_ranking(city, country))
             
 
         with a2:
-            st.write('USA')
+            st.write('USA' + ' (' + 'out of ' + str(num_cities_us) + ')')
             st.write(get_usa_ranking(city, country))
             
 
     else:
-        st.write('World')
+        st.write('World' + ' (' + 'out of ' + str(num_cities_world) + ')')
         st.write(get_world_ranking(city, country))
 
     ###########################################################################################
@@ -176,19 +182,26 @@ def app():
     st.markdown("""---""")
     st.subheader('Ranking change for each index')
 
+    df = pd.read_csv('02_data-wrangling/04_data/quality_of_life_index_5yrs_scale_geo.csv')
+    df = df[df['Year']==year]
+    df_us = df[df['Country'] == 'United States']
+    num_cities_world = len(df)
+    num_cities_us = len(df_us)
+
     if country == 'United States': 
 
         a1, a2 = st.columns((5,5))
 
         with a1:
-            st.markdown('World')
+            st.markdown('World' + ' (' + 'out of ' + str(num_cities_world) + ')')
             st.write(get_world_rank_table(city, country))
 
         with a2:
-            st.markdown('USA')
+            st.markdown('USA' + ' (' + 'out of ' + str(num_cities_us) + ')')
             st.write(get_usa_rank_table(city, country))
 
     else:
+        st.markdown('World' + ' (' + 'out of ' + str(num_cities_world) + ')')
         st.write(get_world_rank_table(city, country))
 
     ###########################################################################################
