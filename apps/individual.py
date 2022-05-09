@@ -78,6 +78,7 @@ def app():
         ranking_world = rank_change_world.iloc[0].to_frame().T
         
         return ranking_world
+    
     ####################################
         
     
@@ -384,20 +385,19 @@ def app():
 
         num_peer = 2
 
-        # importing and get 2022 data
+        # importing scaled data
+
         qol = pd.read_csv('02_data-wrangling/04_data/quality_of_life_index_5yrs_scale_geo.csv')
 
-
         # Sort dataframe according to Quality of Life Index
-        df_peer = qol[
-            (qol.Year==year)
-        ].sort_values(by='Quality of Life Index', ascending=False).reset_index(drop=True)
+        df = qol[(qol.Year==year)
+                ].sort_values(by='Quality of Life Index', ascending=False).reset_index(drop=True)
 
         # reset index so that index start from 1
-        df_peer.index = np.arange(1, len(df_peer)+1)
+        df.index = np.arange(1, len(df)+1)
 
         # finding index number for chosen city 
-        chosen_index = df_peer[(df_peer.City==city)].index.values.astype(int)[0]
+        chosen_index = df[(df.City==city) & (df.Country == country)].index.values.astype(int)[0]
 
         # list up index numbers for peer group
         index_range=[]
@@ -405,26 +405,26 @@ def app():
             index_range.append(chosen_index-num_peer)
             chosen_index += 1
 
-        # remove irrelevant index numbers like 0, -1, -2 ...   
-        index_range = [item for item in index_range if item > 0]
+        chosen_index_to_insert = int(np.median(index_range))
 
+        # remove irrelevant index numbers like 0, -1, -2 and numbers that are out of the rankings...   
+        index_range = [item for item in index_range if item > 0 and item <= len(df)]
 
-        display_col = ['City', 'Country', 'Quality of Life Index', 'Purchasing Power Index',
+        # remove irrelevant index numbers like 0, -1, -2 and numbers that are out of the rankings...   
+        index_range = [item for item in index_range if item > 0 and item <= len(df)]
+
+        # display the chosen city and the peers with chosen city highlighted
+
+        display_col = ['City', 'Quality of Life Index', 'Purchasing Power Index',
             'Safety Index', 'Healthcare Index', 'Cost of Living Index',
             'Property Price to Income Ratio', 'Traffic Commute Time Index',
             'Pollution Index', 'Climate Index']
 
-        # display the chosen city and the peers with chosen city highlighted
-
-        chosen_index = df_peer[(df_peer.City==city)].index.values.astype(int)[0]
-        df_peer_display = df_peer.loc[index_range][display_col].style.apply(
-            lambda x: ['background: lightgreen' if x.name == chosen_index else '' for i in x
-                    ], axis=1).format({'Quality of Life Index': '{:,.1f}', 
-                                        'Purchasing Power Index': '{:,.1f}','Safety Index': '{:,.1f}', 
-                                        'Healthcare Index': '{:,.1f}', 'Cost of Living Index': '{:,.1f}',
-                                        'Property Price to Income Ratio': '{:,.1f}',
-                                        'Traffic Commute Time Index': '{:,.1f}','Pollution Index': '{:,.1f}',
-                                        'Climate Index': '{:,.1f}'})
+        df_peer_display = df.loc[index_range][display_col].style.apply(
+            lambda x: ['background: lightgreen' if x.name == chosen_index_to_insert else '' for i in x], axis=1
+            ).format({'Quality of Life Index': '{:,.1f}', 'Purchasing Power Index': '{:,.1f}','Safety Index': '{:,.1f}', 
+            'Healthcare Index': '{:,.1f}', 'Cost of Living Index': '{:,.1f}','Property Price to Income Ratio': '{:,.1f}',
+            'Traffic Commute Time Index': '{:,.1f}','Pollution Index': '{:,.1f}', 'Climate Index': '{:,.1f}'})
 
         return df_peer_display
         

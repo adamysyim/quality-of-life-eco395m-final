@@ -26,7 +26,7 @@ def app():
 
     # slider widget for choosing relevant year
     year = st.sidebar.slider('Choose Year between 2018 and 2022', min_value = 2018, max_value = 2022, step = 1)
-    st.write('Chosen Year:', year)
+    
 
     ###########################################################################################
     

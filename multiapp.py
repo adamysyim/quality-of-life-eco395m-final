@@ -5,11 +5,11 @@ class MultiApp:
     
     def __init__(self):
     
-        self.apps = []
+        self.streamlit_apps = []
 
     def add_app(self, title, func):
     
-        self.apps.append({
+        self.streamlit_apps.append({
             'title': title,
             'function': func
         })
@@ -18,7 +18,7 @@ class MultiApp:
     
         app = st.selectbox(
             'Navigation',
-            self.apps,
+            self.streamlit_apps,
             format_func=lambda app: app['title'])
 
         app['function']()

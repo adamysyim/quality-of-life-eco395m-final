@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import overview, individual, compare # import your app modules here
+from streamlit_apps import overview, individual, compare
 
 st.set_page_config(layout='wide')
 
