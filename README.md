@@ -1,5 +1,5 @@
 ## The goal of the Project
-- Today, more than 50% of the world's population lives in cities. It is highly likely that your quality of life depends on what city you live. We want to find out what are the best cities to live, what are the factors that affect the quality of life in that cities, how the ranking of some of those cities change over the last 5 years. 
+- Today, more than 50% of the world's population lives in cities. In tHe US, 83% of the population lives in urban areas. It is highly likely that your quality of life depends on what city you live. We want to find out what are the best cities to live in the world and in the US, what are the factors that affect the quality of life in that cities, and how the ranking of some of those cities change over the last 5 years. 
 - Given that everyone has different preferences and needs, we focus mainly on providing user-friendly interactive graphs and tables with search options.
 - As for overall data analysis, we would like to show "Quality of Life Index" of each city worldwide and USA-wide.   
 
@@ -22,29 +22,41 @@
 | Index | Description                                                |
 | :---          |    :----                                                 |
 | **Purchasing Power Index**| relative purchasing power in buying goods and services in a given city for the average net salary in that city. If domestic purchasing power is 40, this means that the inhabitants of that city with an average salary can afford to buy on an average 60% less goods and services than New York City residents with an average salary. |
-| **House Price To Income Ratio**| the basic measure for apartment purchase affordability (lower is better). It is generally calculated as the ratio of median apartment prices to median familial disposable income, expressed as years of income (although variations are used also elsewhere). |
+| **Property Price To Income Ratio**| the basic measure for apartment purchase affordability (lower is better). It is calculated as the ratio of median apartment prices to median familial disposable income, expressed as years of income (although variations are used elsewhere such as Case-Shiller Index, UK Housing Price Index, etc). |
 | **Cost of Living Index**| a relative indicator of consumer goods prices, including groceries, restaurants, transportation and utilities. Cost of Living Index does not include accommodation expenses such as rent or mortgage. If a city has a Cost of Living Index of 120, it means Numbeo has estimated it is 20% more expensive than New York (excluding rent).|
-| **Safety Index**| based on surveys from visitors of the website. Questions for these surveys are similar to many similar scientific and government surveys. Numbeo filters surveys to eliminate potential spam, like people entering a large amount of data which are differentiating from the median value. Survey result is scaled to [0, 100].|
-| **Health Index**|based on surveys from visitors of the website. Questions for these surveys are similar to many similar scientific and government surveys. Numbeo filters surveys to eliminate potential spam, like people entering a large amount of data which are differentiating from the median value. Survey result is scaled to [0, 100]. |               
+| **Safety Index**| based on surveys from visitors of the website. If the city has a high safety index, it is considered very safe. Questions for these surveys are similar to many similar scientific and government surveys. Numbeo filters surveys to eliminate potential spam, like people entering a large amount of data which are differentiating from the median value. Survey result is scaled to [0, 100]. |
+| **Health Index**| based on surveys from visitors of the website. Questions for these surveys are similar to many similar scientific and government surveys. Health Care Index is an estimation of the overall quality of the health care system, health care professionals, equipment, staff, doctors, cost, etc. Numbeo filters surveys to eliminate potential spam, like people entering a large amount of data which are differentiating from the median value. Survey result is scaled to [0, 100]. |               
 | **Traffic Time Index**| a composite index of time consumed in traffic due to job commute, estimation of time consumption dissatisfaction, CO2 consumption estimation in traffic and overall inefficiencies in the traffic system.|
-| **Pollution Index**| based on surveys from visitors of the website. Questions for these surveys are similar to many similar scientific and government surveys. Numbeo filters surveys to eliminate potential spam, like people entering a large amount of data which are differentiating from the median value. Survey result is scaled to [0, 100]. |
+| **Pollution Index**| based on surveys from visitors of the website. Pollution Index is an estimation of the overall pollution in the city. The biggest weight is given to air pollution, than to water pollution/accessibility, two main pollution factors. Small weight is given to other pollution types. Questions for these surveys are similar to many similar scientific and government surveys. Numbeo filters surveys to eliminate potential spam, like people entering a large amount of data which are differentiating from the median value. Survey result is scaled to [0, 100]. |
 | **Climate Index**| produced by a formula which uses dew point and temperature (and estimated avg. high humidex using those two numbers) to estimate a climate index.|
+
+For consitency, we used the data since 2018 since NUMBEO changed the formula for Quality of Life Index since 2018. 
 
 ## Methodology and Description of the Project 
 1. Web-scrape the original data using Beautiful soup
-2. Load the data on GCP database and reorganize them by using SQL  
-3. Further replenish the data: 
-- add geometrical information(longitude, latitude) for geopraphic presentation
-- recategorize some features for more accurate depiction of the overall information
-- for ease of analysis and visualization, indexes are scaled with min-max normalization method. Also, when scaled, all the indexes are adjusted so that higher number reflects better condition.
+  - year by year tables
+  - continent by continent tables for continent specific analysis
+3. Load the data on GCP database and reorganize/merge them by using SQL  
+4. Further replenish the data: 
+  - add geometrical information(longitude, latitude) for geopraphic presentation
+  - for ease of analysis and visualization, indexes are scaled with min-max normalization method. Also, when scaled, all the indexes are adjusted so that higher number reflects better condition.
+  - convert indexes to ranking 
 5. Analyze the data and show different aspects of the indexes in terms of:
 - Overall statistics
 - World
 - USA
 - Visualize the information with graphs and tables with options for the reader to choose the city and year of interest
-6. Build intereactive dashboard using Streamlit
+6. Build multi-page intereactive dashboard using Streamlit
 
 ##  Findings and Analysis
+
+#### [Indexes] 
+Though hypothetical at this stage, we attempted to find correlation coefficients between indexes to examine any meaningful relationships. In the meantime, we need more samples with accurate data to further develop and determine the significance of the relationship. 
+- Since Purchasing Power Index, Property Price to Income Ratios, and Cost of Living Index are economic indexes sharing some features like price of goods, services and assets which are correlated, they have correlation coefficients of more than 0.5
+  - Purchasing power index and property price to income ratios: 0.6
+  - Purchasing power index and cost of living index: 0.7
+- Cities with higher Purchasing Power tend to have low Pollution Index (correlation coefficient of 0.6). We can hypothsize that cities with more Purchasing Power Index tend to have high number of population and population density, and this would result in more pollution.
+
 
 #### [World]
 - The data contains Quality of Life Index and its sub-indexes across 255 cities in the world in 2022. The number of cities surveyed has grown for the last 5 years (184 in 2018)
@@ -64,7 +76,6 @@
   - Traffic Commute Time Index rose 64.6% contributing in large portion to the increase in overall Quality of Life Index
 - Top 5 most livable cities in 2022 are: Raleigh, Columbus, Madison, Austin, Charlotte. Whereas, bottom 5 are: Detroit, New York, Los Angeles, Philadelphia, Miami. Most of the low ranking cities have poor scores on Purchasing Power Index. 
 
-
 #### [Individual City] By exploring our interactive dashboard, you can choose whatever city you like and see the results. Here, we provide the result for Austin, Texas as a representative.
 - Austin ranks 4th highest Quality of Life in the USA(7th in the world). For the last five years, Austin has maintained its ranking within top10 
 - Compared to the US average of each index, Austin has better numbers on every index. Particularly, Austin has strong point on Purchasing Power Index, 158.21, which means the inhabitants of Austin with an average salary can afford to buy on an average 58% more goods and services than New York City residents with an average salary. Also, Austin has high points on the Safety Index which is 15% higher than the national average.
@@ -83,7 +94,8 @@
 - To improve accuracy of the indexes, particularly those data based surveys, we can look into ‘National Health Interview Survey’ and match similar questions in Numbeo survey to see they are consistent. As for ‘Pollution Index’ we can compare it with outside sources such as ‘Pollution Rankings’ researched by U.S. News.
 
 ## Areas for more research
-- Data such as ‘change in population’ and ‘rate of population influx/outflux’ can be matched with the ‘change in the ranking on Quality of Life’ of each city to see the correlation. This could be developed further into modeling.
+- Data such as ‘change in population’ and ‘rate of population influx/outflux’ can be obtained from Census data to be matched with the ‘change in the ranking on Quality of Life’ of each city to see the correlation. This could be developed further into modeling.
+- We can further investigate correlations between indexes. As mentioned before, cities with higher Purchasing Power tend to have low Pollution Index. This tendency may be closely associated with city population size and population density.  
 
 
 # Instructions to Rerun the Analysis
@@ -157,7 +169,7 @@ b) export below tables and store them in ```02_data-wrangling/02_data``` as csv 
 
 ### 4. Interactive Dashboard : Steamlit**
 - Visit ```https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py``` to interact with the **dashboard**
-- You can **Run** ```../app.py```, the relevant command is ```streamlit run```. Please be reminded that ```streamlit run``` doesn't work in GCP environment. You have to clone the entire repo to your local storage and run ```streamlit run app.py``` locally. 
+- You can **Run** ```../app.py```, the relevant command is ```streamlit run```. ```pip install streamlit``` before you run the code. Please be reminded that ```streamlit run``` doesn't work in GCP environment. You have to clone the entire repo to your local storage and run ```streamlit run app.py``` locally. 
 
 
 #### Code writers 
