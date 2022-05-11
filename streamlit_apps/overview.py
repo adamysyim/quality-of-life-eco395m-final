@@ -91,7 +91,7 @@ def app():
 
     #########
 
-    qol_con = pd.read_csv('02_data-wrangling/02_data/quality_of_life_index_5yrs.csv')
+    qol_con = pd.read_csv('02_data-wrangling/04_data/quality_of_life_index_5yrs_original_geo.csv')
 
     qol_con_yr = qol_con.loc[qol_con['Year'] == year]
 
@@ -112,7 +112,7 @@ def app():
     st.subheader('Number of High ranking cities across continents' + ' (' + f'{year}' + ')')
 
     # importing data with continent information
-    qol_con = pd.read_csv('02_data-wrangling/02_data/quality_of_life_index_5yrs.csv')
+    qol_con = pd.read_csv('02_data-wrangling/04_data/quality_of_life_index_5yrs_original_geo.csv')
 
     # slider widget for choosing relevant year
 
