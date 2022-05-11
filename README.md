@@ -84,6 +84,8 @@ Though hypothetical at this stage, we attempted to find correlation coefficients
 
 - However, during the last five years, the Health Care Index showed the most decline in ranking, from 5 to 24. The pollution Index ranking also showed deterioration, from 10 to 24.
 
+To find out more on individual cities, please visit our [DASHBOARD](https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py)
+
 ## Limitations of the Dataset
 - Some indexes are based on surveys. Therefore, there is always a risk that people will provide dishonest answers and there can be differences in how people understand the survey questions. Surveys don’t provide the same level of personalization.
 - Some of the indexes are based on surveys that are written in English. This bias caused by largely English-speaking respondents can be corrected by having multi-language surveys.
@@ -156,8 +158,8 @@ b) export below tables and store them in ```02_data-wrangling/02_data``` as csv 
   - quality_of_life_index_5yrs.csv
 
 #### [Pandas]
-- **Run** ```../02_data_wrangling/03_code(pandas)/data-wrangling.ipynb```
-- (Reminder on part using Geopandas to obtain the latitude and longitude of each city: due to its inherenet characteristics, the process takes 2~3 minutes to complete)
+- **Run** ```../02_data_wrangling/03_code(pandas)/data-wrangling.py```
+  - (Reminder on part using Geopandas to obtain the latitude and longitude of each city: due to its inherenet characteristics, the process takes 2~3 minutes to complete)
 - Resulting csv files are automatically stored in ```../02_data_wrangling/04_data```
 
 ### 3. Data Analysis and Results : Pandas
@@ -168,7 +170,7 @@ b) export below tables and store them in ```02_data-wrangling/02_data``` as csv 
 - **Run** ```../03_data analysis and visualization/4._Individual city in US.ipynb``` 
 
 ### 4. Interactive Dashboard : Steamlit**
-- Visit ```https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py``` to interact with the **dashboard**
+- Visit following [URL](https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py)(```https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py```) to interact with the **dashboard**
 - You can **Run** ```../app.py```, the relevant command is ```streamlit run```. ```pip install streamlit``` before you run the code. Please be reminded that ```streamlit run``` doesn't work in GCP environment. You have to clone the entire repo to your local storage and run ```streamlit run app.py``` locally. 
 
 
