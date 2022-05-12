@@ -1,5 +1,5 @@
 ## The goal of the Project
-- Today, more than 50% of the world's population lives in cities. In tHe US, 83% of the population lives in urban areas. It is highly likely that your quality of life depends on what city you live. We want to find out what are the best cities to live in the world and in the US, what are the factors that affect the quality of life in that cities, and how the ranking of some of those cities change over the last 5 years. 
+- Today, more than 50% of the world's population lives in cities. In the US, 83% of the population lives in urban areas. It is highly likely that your quality of life depends on what city you live. We want to find out what are the best cities to live in the world and in the US, what are the factors that affect the quality of life in that cities, and how the ranking of some of those cities change over the last 5 years. 
 - Given that everyone has different preferences and needs, we focus mainly on providing user-friendly interactive graphs and tables with search options.
 - As for overall data analysis, we would like to show "Quality of Life Index" of each city worldwide and USA-wide.   
 
@@ -8,8 +8,6 @@
 - These are provided by Numbeo which is the world’s largest cost of living database in the web. Numbeo is also a crowd-sourced global database of quality of life informations.
 
   Link: https://www.numbeo.com/quality-of-life/rankings.jsp
-
-- Quality of life index formula:  100 + (purchasing Power Index / 2.5) - (House Price To IncomeRatio * 1.0) - (Cost of Living Index / 10) + (Safety Index / 2.0) + (HealthIndex / 2.5) - (Traffic Time Index / 2.0) - (Pollution Index * 2.0 / 3.0) + (Climate Index / 3.0)
 
 ## Summary of the Documentation of the Dataset
 
@@ -30,7 +28,7 @@
 | **Pollution Index**| based on surveys from visitors of the website. Pollution Index is an estimation of the overall pollution in the city. The biggest weight is given to air pollution, than to water pollution/accessibility, two main pollution factors. Small weight is given to other pollution types. Questions for these surveys are similar to many similar scientific and government surveys. Numbeo filters surveys to eliminate potential spam, like people entering a large amount of data which are differentiating from the median value. Survey result is scaled to [0, 100]. |
 | **Climate Index**| produced by a formula which uses dew point and temperature (and estimated avg. high humidex using those two numbers) to estimate a climate index.|
 
-For consitency, we used the data since 2018 since NUMBEO changed the formula for Quality of Life Index since 2018. 
+For consitency, we used the data since 2018 because current formula for the Quality of Life index has been applied since then.
 
 ## Methodology and Description of the Project 
 1. Web-scrape the original data using Beautiful soup
