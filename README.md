@@ -114,10 +114,15 @@ To find out more on individual cities, please visit our [DASHBOARD](https://shar
 #### [USA]
 - To improve accuracy of the indexes, particularly those data based surveys, we can look into ‘National Health Interview Survey’ and match similar questions in Numbeo survey to see they are consistent. As for ‘Pollution Index’ we can compare it with outside sources such as ‘Pollution Rankings’ researched by U.S. News.
 
+#### [World]  
+- The survey procedures should be wroked on with international researchers to minimize the language bias as much as possible.  
+
+
 ## Areas for more research
 - Data such as ‘change in population’ and ‘rate of population influx/outflux’ can be obtained from Census data to be matched with the ‘change in the ranking on Quality of Life’ of each city to see the correlation. This could be developed further into modeling.
 - We can further investigate correlations between indexes. As mentioned before, cities with higher Purchasing Power tend to have low Pollution Index. This tendency may be closely associated with city population size and population density.  
-
+- We can add interesting the case of Bhutan. Bhutan has known for happiest country in the world but ranks 95th out of 156 countries in the 2019 World Happiness Report. This happiness case can be worth to connect this Quality of life research.  
+Source: https://www.cnn.com/2019/09/13/health/bhutan-gross-national-happiness-wellness/index.html  
 
 # Instructions to Rerun the Analysis
 
