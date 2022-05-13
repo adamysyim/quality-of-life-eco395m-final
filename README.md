@@ -58,7 +58,7 @@ Though hypothetical at this stage, we attempted to find correlation coefficients
 - Since Purchasing Power Index, Property Price to Income Ratios, and Cost of Living Index are economic indexes sharing some features like price of goods, services and assets which are correlated, they have correlation coefficients of more than 0.5
   - Purchasing power index and property price to income ratios: 0.6
   - Purchasing power index and cost of living index: 0.7
-- Cities with higher Purchasing Power tend to have low Pollution Index (correlation coefficient of 0.6). We can hypothsize that cities with more Purchasing Power Index tend to have high number of population and population density, and this would result in more pollution.
+- Cities with higher Purchasing Power tend to have low Pollution Index (correlation coefficient of -0.6). We can hypothsize that cities with more Purchasing Power Index tend to have high number of population and population density, and this would result in more pollution.
 
 
 #### [World]
