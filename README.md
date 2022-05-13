@@ -99,7 +99,7 @@ To find out more on individual cities, please visit our [DASHBOARD](https://shar
  
 - How the ranking of some of those cities change over the last 5 years?   
   ☞ Raleigh in North Carolina ranks 3rd(2018) → 1st(2022)  
-     Canberra in Australia ranks 1st(2018) → 2nd(2022)  
+  ☞ Canberra in Australia ranks 1st(2018) → 2nd(2022)  
      
 
 
@@ -143,7 +143,7 @@ This process is very tedious and takes some time. Please bear with us and follow
 
 **A. Setting up database instance in GCP and DBeaver**
 
-a) Create a database instance in Google Cloud Platform (GCP). If you've already done this, you can use the one you already have. Go to GCP SQL and create a PostgreSQL 13 database instance. Make sure that you whitelist the IPs in block 0.0.0.0/0. Picking the lowest spec for this instance will be sufficient for this problem. Save your password.
+a) Create a database instance in Google Cloud Platform (GCP). If you have already done this, you can use the one you already have. Go to GCP SQL and create a PostgreSQL 13 database instance. Make sure that you whitelist the IPs in block 0.0.0.0/0. Picking the lowest spec for this instance will be sufficient for this problem. Save your password.
 
 b) Use GCP SQL to create a database called “final”. You can do this in the "Databases" tab.
 
