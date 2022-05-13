@@ -1,8 +1,13 @@
 ## The goal of the Project
-- Today, more than 50% of the world's population lives in cities. In the US, 83% of the population lives in urban areas. It is highly likely that your quality of life depends on what city you live. We want to find out what are the best cities to live in the world and in the US, what are the factors that affect the quality of life in that cities, and how the ranking of some of those cities change over the last 5 years. 
+- Today, more than 50% of the world's population lives in cities. In the US, 83% of the population lives in urban areas. It is highly likely that your quality of life depends on what city you live. 
 - Given that everyone has different preferences and needs, we focus mainly on providing user-friendly interactive graphs and tables with search options.
 - As for overall data analysis, we would like to show "Quality of Life Index" of each city worldwide and USA-wide.   
 
+  #### [Research Questions]  
+- What are the best cities to live in the world and in the US?  
+- What are the factors that affect the quality of life in that cities?  
+- How the ranking of some of those cities change over the last 5 years?   
+    
 ## Source of the Dataset
 - Quality of Life Index (higher is better) is an estimation of overall quality of life by using an empirical formula which takes into account purchasing power index (higher is better), pollution index (lower is better), house price to income ratio (lower is better), cost of living index (lower is better), safety index (higher is better), health care index (higher is better), traffic commute time index (lower is better) and climate index (higher is better).
 - These are provided by Numbeo which is the world’s largest cost of living database in the web. Numbeo is also a crowd-sourced global database of quality of life informations.
@@ -83,6 +88,22 @@ Though hypothetical at this stage, we attempted to find correlation coefficients
 - However, during the last five years, the Health Care Index showed the most decline in ranking, from 5 to 24. The pollution Index ranking also showed deterioration, from 10 to 24.
 
 To find out more on individual cities, please visit our [DASHBOARD](https://share.streamlit.io/adamysyim/quality-of-life-eco395m-final/main/app.py)
+
+
+  #### Conclusion
+- What are the best cities to live in the world and in the US?  
+  ☞ Raleigh in North Carolina ranks 1st(2022) in the world. 
+  
+- What are the factors that affect the quality of life in that cities?  
+  ☞ Purchasing Power Index, Property Price to Income Ratios, and Cost of Living Index are the main factors.  
+ 
+- How the ranking of some of those cities change over the last 5 years?   
+  ☞ Raleigh in North Carolina ranks 3rd(2018) → 1st(2022)  
+     Canberra in Australia ranks 1st(2018) → 2nd(2022)  
+     
+
+
+
 
 ## Limitations of the Dataset
 - Some indexes are based on surveys. Therefore, there is always a risk that people will provide dishonest answers and there can be differences in how people understand the survey questions. Surveys don’t provide the same level of personalization.
